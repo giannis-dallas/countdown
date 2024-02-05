@@ -11,12 +11,12 @@ export default function Diff({props}) {
 
     return (
     <>
-        <dvv className="diff-card bg-maize p-20">
+        <div className="diff-card bg-brilliant-rose-300 p-16 text-lg grid justify-center items-center gap-4">
             Πόσες μέρες μέχρι τα Γενέθλιά μου;
-            <p>
+            <p className='text-4xl mt-4'>
             {daysDifference}
             </p>
-        </dvv>
+        </div>
     </>
     )
 }

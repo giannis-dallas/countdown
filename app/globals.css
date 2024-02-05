@@ -2,23 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brilliant-rose-50: rgb(253, 242, 249);
+  --brilliant-rose-100: rgb(252, 231, 245);
+  --brilliant-rose-200: rgb(252, 206, 237);
+  --brilliant-rose-300: rgb(251, 166, 221);
+  --brilliant-rose-400: rgb(246, 112, 196);
+  --brilliant-rose-500: rgb(241, 91, 181);
+  --brilliant-rose-600: rgb(222, 36, 139);
+  --brilliant-rose-700: rgb(193, 21, 110);
+  --brilliant-rose-800: rgb(160, 20, 92);
+  --brilliant-rose-900: rgb(133, 22, 79);
+  --brilliant-rose-950: rgb(81, 6, 44);
+}
 
 /* base styles */
 body {
-  background: #ebf0fa;
-  @apply text-black m-0;
+  min-height: 100dvh;
+  @apply m-0;
+  display: grid;
+  grid-template-rows: 100px minmax(0, 1fr) 100px;
+  grid-template-columns:  1fr;
 }
 
-header.app-navbar{
-  height: 100px;
+header,
+footer,
+main {
+  grid-column: 1 / -1;
+  display: grid;
+  place-content: strech center
+}
+
+header > .container,
+footer > .container,
+main > .container{
+  padding: 20px;
+}
+
+header.app-navbar .container{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-footer.app-footer{
-  height: 100px;
+footer.app-footer .container{
   display: flex;
   flex-direction: row;
   align-items: center;

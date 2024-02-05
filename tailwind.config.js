@@ -8,12 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'transparent': 'transparent',
-        'amethyst': '#9b5de5ff',
-        'brilliant-rose': '#f15bb5ff',
-        'maize': '#fee440ff',
-        'deepskyblue': '#00bbf9ff',
-        'aquamarine': '#00f5d4ff',
+        'brilliant-rose': {
+          '50': '#fdf2f9',
+          '100': '#fce7f5',
+          '200': '#fcceed',
+          '300': '#fba6dd',
+          '400': '#f670c4',
+          '500': '#f15bb5',
+          '600': '#de248b',
+          '700': '#c1156e',
+          '800': '#a0145c',
+          '900': '#85164f',
+          '950': '#51062c',
+        },      
       },
     },
   },
