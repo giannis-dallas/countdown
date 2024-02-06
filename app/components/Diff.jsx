@@ -1,9 +1,13 @@
-import { differenceInDays, format } from 'date-fns';
+import { differenceInDays, format, getYear } from 'date-fns';
 
 export default function Diff({name, end}) {
 
-    
     const startDate = new Date();
+
+    const currentYear = getYear(startDate);
+    
+
+
     const endDate = new Date(end);
     
     console.log(end);
