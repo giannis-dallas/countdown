@@ -23,6 +23,7 @@ body {
   display: grid;
   grid-template-rows: 100px minmax(0, 1fr) 100px;
   grid-template-columns:  1fr;
+  line-height: 1.5;
 }
 
 header,
@@ -52,3 +53,19 @@ footer.app-footer .container{
   align-items: center;
   justify-content: space-between;
 }
+
+h1,h2,h3,h3,h5,h6{
+  line-height: 1.2;
+  color:var(--brilliant-rose-800);
+  margin-bottom: 1em;
+}
+
+/* Cards */
+
+.diff-cards{
+  max-width: 760px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+

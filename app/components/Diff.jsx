@@ -1,13 +1,8 @@
-import { differenceInDays, format, getYear } from 'date-fns';
+import { differenceInDays, format } from 'date-fns';
 
 export default function Diff({name, end}) {
 
     const startDate = new Date();
-
-    const currentYear = getYear(startDate);
-    
-
-
     const endDate = new Date(end);
     
     console.log(end);
@@ -20,12 +15,12 @@ export default function Diff({name, end}) {
 
     return (
     <>
-        <div className="diff-card bg-brilliant-rose-300 p-16 text-lg grid justify-center items-center gap-4 my-4">
-            <small>Πόσες μέρες μέχρι?</small>
-            <p>{name}</p>
-            <p className='text-4xl mt-4'>
+        <div className="diff-card bg-brilliant-rose-300 p-10 text-lg grid justify-center items-center gap-4">
+            <h3 className='text-lg m-0'>{name}</h3>
+            <p className='text-4xl'>
             {daysDifference}
             </p>
+            <p className="text-sm">{ format(endDate,'dd MMMM') }</p>
         </div>
     </>
     )
