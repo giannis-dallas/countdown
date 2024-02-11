@@ -1,20 +1,18 @@
+import Diff from "./Diff"
+
 async function getDates(){
     const res = await fetch('http://localhost:3001/dates')
     return res.json()
 };
 
 
-export default async function DateList() {
+export default async function DateCards() {
     const dates = await getDates()
-
   return (
-    <>
-        <h1 className="text-3xl">Ημερομηνίες</h1>
+    <div className="diff-cards">
         {dates.map( (date) => (
-            <div key={date.id}>
-                {date.title}
-            </div>
+            <Diff key={date.id} name={date.title} end={date.date}></Diff>
         ))}
-    </>
+    </div>
   )
 }
