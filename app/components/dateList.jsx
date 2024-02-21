@@ -1,5 +1,8 @@
+import { format } from "date-fns"
+import { el } from "date-fns/locale"
+
 async function getDates(){
-    const res = await fetch('http://localhost:3001/dates')
+    const res = await fetch('http://localhost:3001/dates',{cache:"no-cache"})
     return res.json()
 };
 
@@ -9,10 +12,14 @@ export default async function DateList() {
 
   return (
     <>
-        <h1 className="text-3xl">Ημερομηνίες</h1>
-        {dates.map( (date) => (
-            <div key={date.id}>
-                {date.title}
+        {dates.map( ({id, title, date}) => (
+            <div key={id} className="max-w-sm pb-6 mb-6 border-b-2 border-brilliant-rose-200"> 
+            <p className="text-md">
+                {title}
+            </p>
+            <p className="text-sm text-brilliant-rose-600">
+                {format(date, 'PP', {locale: el})}
+            </p>
             </div>
         ))}
     </>

@@ -1,7 +1,7 @@
 import Diff from "./Diff"
 
 async function getDates(){
-    const res = await fetch('http://localhost:3001/dates')
+    const res = await fetch('http://localhost:3001/dates', { cache: "no-cache"})
     return res.json()
 };
 

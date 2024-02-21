@@ -1,4 +1,5 @@
 import { differenceInDays, format } from 'date-fns';
+import { el } from 'date-fns/locale'
 
 export default function Diff({name, end}) {
 
@@ -20,7 +21,7 @@ export default function Diff({name, end}) {
             <p className='text-4xl'>
             {daysDifference}
             </p>
-            <p className="text-sm">{ format(endDate,'dd MMMM') }</p>
+            <p className="text-sm">{ format(endDate,'dd MMMM', { locale: el }) }</p>
         </div>
     </>
     )
