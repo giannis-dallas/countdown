@@ -33,7 +33,7 @@ export default function AddDate() {
       'date': format(selected, 'PP')
     }
 
-    const res = await fetch('http://localhost:3001/dates/', {
+    const res = await fetch('https://countdown-4pgn.onrender.com/dates/', {
       cache: 'no-store',
       method: 'POST',
       headers: {
